@@ -1,9 +1,480 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iniciar seccion - frumax</title>
+    <title>FRUMAX - Panel de Administración</title>
 </head>
 
+<body>
+
+<table width="100%" border="1" cellpadding="10" cellspacing="0">
+<tr>
+
+<!-- MENÚ LATERAL -->
+<td width="18%" valign="top" bgcolor="ffffff">
+
+    <center>
+        <h2>FRUMAX</h2>
+
+        <table border="0">
+            <tr>
+                    <center>
+                        <font color="black" size="5">E</font>
+                    </center>
+                </td>
+            </tr>
+        </table>
+
+        <b>elkinverdugo43<br>
+        <small>Administrador</small>
+        </center>
+
+    <br>
+
+    <table width="100%" border="0" cellpadding="12">
+
+        <tr>
+            <td> Dashboard</td>
+        </tr>
+
+        <tr>
+            <td> Calendario</td>
+        </tr>
+
+        <tr>
+            <td> Mensajes</td>
+        </tr>
+
+        <tr>
+            <td> Usuarios</td>
+        </tr>
+
+        <tr>
+            <td> Productos</td>
+        </tr>
+
+        <tr>
+            <td> Inventario</td>
+        </tr>
+
+        <tr>
+            <td> Ventas</td>
+        </tr>
+
+        <hr>
+
+        <tr>
+            <td> CONFIGURACIÓN</td>
+        </tr>
+
+        <tr>
+            <td> Ajustes</td>
+        </tr>
+
+        <tr>
+            <td> Perfil</td>
+        </tr>
+
+        <tr>
+            <td></td> Cerrar Sesión</td>
+        </tr>
+
+    </table>
+
+</td>
+
+
+<!-- CONTENIDO PRINCIPAL -->
+<td width="82%" valign="top">
+
+    <!-- BARRA SUPERIOR -->
+    <table width="100%" border="0">
+        <tr>
+
+            <td width="5%">
+                <font size="5">☰</font>
+            </td>
+
+            <td>
+                
+                <input
+                    type="text"
+                    placeholder="Buscar productos, ventas, usuarios..."
+                    size="45">
+            </td>
+
+            <td align="right">
+                 <font color="red">3</font>
+                &nbsp;&nbsp;
+
+                <b>elkinverdugo43</b><br>
+                <small>Administrador</small>
+            </td>
+
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- ENCABEZADO -->
+    <table width="100%" border="0" cellpadding="20" bgcolor="ffffff">
+        <tr>
+            <td>
+                <font color="black" size="5">
+                    <b>Panel de Administración</b>
+                </font>
+
+                <br>
+
+                <font color="black">
+                    Bienvenido, elkinverdugo43.
+                    Aquí tienes un resumen general de tu fruver.
+                </font>
+            </td>
+
+            <td align="right">
+                <font color="black">
+                    ¡Frescura que se nota,
+                    calidad que te acompaña!
+                </font>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- TARJETAS -->
+    <table width="100%" border="1" cellpadding="15" cellspacing="8">
+
+        <tr>
+
+            <td width="25%">
+                <font color="gray">Total Usuarios</font>
+
+                <h2>1</h2>
+
+                <small>Usuarios registrados</small>
+
+                <p align="right"></p>
+            </td>
+
+            <td width="25%">
+                <font color="gray">Ventas Hoy</font>
+
+                <h2>$350.000</h2>
+
+                <small>Total en ventas</small>
+
+                <p align="right"></p>
+            </td>
+
+            <td width="25%">
+                <font color="gray">Productos en Inventario</font>
+
+                <h2>152</h2>
+
+                <small>
+                    <font color="green">
+                        Productos disponibles
+                    </font>
+                </small>
+
+                <p align="right"></p>
+            </td>
+
+            <td width="25%">
+                <font color="gray">Productos por Vencer</font>
+
+                <h2>8</h2>
+
+                <small>Próximos a vencer</small>
+
+                <p align="right"></p>
+            </td>
+
+        </tr>
+
+    </table>
+
+    <br>
+
+    <!-- ACCIONES RÁPIDAS -->
+    <table width="100%" border="1" cellpadding="15">
+
+        <tr>
+            <td>
+
+                <font color="green">▌</font>
+                <b>Acciones Rápidas</b>
+
+                <br><br>
+
+                <button> Nueva Venta</button>
+
+                <button> Nuevo Producto</button>
+
+                <button> Compra</button>
+
+                <button> Reporte de Ventas</button>
+
+                <button> Ajustes</button>
+
+            </td>
+        </tr>
+
+    </table>
+
+    <br>
+
+    <!-- VENTAS Y ALERTAS -->
+    <table width="100%" border="1" cellpadding="10">
+
+        <tr>
+
+            <!-- VENTAS -->
+            <td width="55%" valign="top">
+
+                <h3> Ventas Recientes</h3>
+
+                <table width="100%" border="1"
+                       cellpadding="8"
+                       cellspacing="0">
+
+                    <tr bgcolor="#eeeeee">
+                        <th>No. Venta</th>
+                        <th>Cliente</th>
+                        <th>Total</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                    </tr>
+
+                    <tr>
+                        <td>V60025</td>
+                        <td>Cliente General</td>
+                        <td>$41.500</td>
+                        <td>21/08/2026 19:45</td>
+                        <td>
+                            <font color="green">Completada</font>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>V60024</td>
+                        <td>María González</td>
+                        <td>$78.500</td>
+                        <td>21/08/2026 18:30</td>
+                        <td>
+                            <font color="green">Completada</font>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>V60023</td>
+                        <td>Cliente General</td>
+                        <td>$23.200</td>
+                        <td>21/08/2026 17:20</td>
+                        <td>
+                            <font color="green">Completada</font>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>V60022</td>
+                        <td>Pedro Ramírez</td>
+                        <td>$112.000</td>
+                        <td>21/08/2026 16:10</td>
+                        <td>
+                            <font color="green">Completada</font>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>V60021</td>
+                        <td>Cliente General</td>
+                        <td>$36.000</td>
+                        <td>21/08/2026 15:05</td>
+                        <td>
+                            <font color="green">Completada</font>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+
+
+            <!-- ALERTAS -->
+            <td width="45%" valign="top">
+
+                <h3> Alertas de Inventario</h3>
+
+                <table width="100%" border="1"
+                       cellpadding="8"
+                       cellspacing="0">
+
+                    <tr bgcolor="#eeeeee">
+                        <th>Producto</th>
+                        <th>Stock Actual</th>
+                        <th>Estado</th>
+                    </tr>
+
+                    <tr>
+                        <td> Tomate Chonto (kg)</td>
+                        <td>2.5 kg</td>
+                        <td>
+                            <font color="red">Bajo</font>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> Papa Criolla (kg)</td>
+                        <td>3.6 kg</td>
+                        <td>
+                            <font color="red">Bajo</font>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> Cebolla Cabezona (kg)</td>
+                        <td>1.2 kg</td>
+                        <td>
+                            <font color="red">Bajo</font>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> Lechuga Batavia (und)</td>
+                        <td>4 und</td>
+                        <td>
+                            <font color="red">Bajo</font>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td> Zanahoria (kg)</td>
+                        <td>2.6 kg</td>
+                        <td>
+                            <font color="red">Bajo</font>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</td>
+
+</tr>
+</table>
+
+</body>
+</html>
+
+
+    <h2>Ingresos vs Gastos</h2>
+    <p>Últimos 6 meses</p>
+
+    <table border="0" width="100%" height="300">
+
+        <tr>
+            <td width="10%">$3200k</td>
+
+            <td align="center" valign="bottom">
+                <font size="6">█</font>
+                <font size="4">█</font>
+            </td>
+
+            <td align="center" valign="bottom">
+                <font size="6">█</font>
+                <font size="4">█</font>
+            </td>
+
+            <td align="center" valign="bottom">
+                <font size="6">█</font>
+                <font size="4">█</font>
+            </td>
+
+            <td align="center" valign="bottom">
+                <font size="6">█</font>
+                <font size="4">█</font>
+            </td>
+
+            <td align="center" valign="bottom">
+                <font size="6">█</font>
+                <font size="4">█</font>
+            </td>
+
+            <td align="center" valign="bottom">
+                <font size="6">█</font>
+                <font size="4">█</font>
+            </td>
+        </tr>
+
+        <tr>
+            <td>$2400k</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>$1600k</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>$800k</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>$0k</td>
+
+            <td align="center">Mar</td>
+            <td align="center">Abr</td>
+            <td align="center">May</td>
+            <td align="center">Jun</td>
+            <td align="center">Jul</td>
+            <td align="center">Ago</td>
+        </tr>
+
+    </table>
+
+    <br>
+
+    <p>
+        █ Ingresos &nbsp;&nbsp;&nbsp;&nbsp;
+        ░ Gastos
+    </p>
+
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</td>
+
+</tr>
+</table>
+
+</body>
 </html>
