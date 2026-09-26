@@ -37,7 +37,7 @@ body::before {
     z-index: -1;
 }
 
-/* --- HEADER / NAVEGACIÓN --- */
+/* --- NAVEGACIÓN --- */
 header {
     display: flex;
     justify-content: space-between;
@@ -187,13 +187,18 @@ nav a {
 
 .hero-image-container {
     position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
 }
 
 .hero-image-container img {
-    width: 100%;
-    border-radius: 24px;
-    object-fit: cover;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 500px;
+  width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .organic-card {
@@ -490,6 +495,184 @@ nav a {
     gap: 0.5rem;
     margin-top: 0.5rem;
 }
+
+/* cuadro contenedor registro */
+.login-card {
+    border: 1px solid #d1d5db;
+    border-radius: 16px;
+    padding: 30px 25px;
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    
+}
+/*paleta de colores panel de control*/
+:root {
+    --sidebar-bg: #116b38;
+    --sidebar-hover:#0e552d;
+    --primary-green: #15803d;
+    --active-red: #dc2626;
+    --bg-light: #f4f6f8;
+}
+
+/*cuerpo de la pagina*/
+body{
+background-color: var( --bg-light);
+font-family: 'segoe ui','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+overflow-x: hidedn; 
+margin: 0;
+padding: 0;
+}
+/*extructura*/
+.wapper{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+/*contenedor*/
+.main-content {
+    flex-grow: 1;
+    padding: 1.5rem;
+    max-width: calc(100vw - 260px);
+}
+/*barra lateral*/
+.sidebar{
+    width: 260px;
+    background-color: var(--sidebar-bg);
+    color: #ffffff;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
+/* Marca y Logo superior */
+.sidebar-brand {
+    padding: 1.5rem 1rem 0.5rem 1rem;
+    text-align: center;
+}
+
+/* Avatar del Usuario en el Menú Lateral */
+.sidebar-user {
+    text-align: center;
+    padding: 0.5rem 1rem 1.5rem 1rem;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #10b981;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 auto 0.5rem auto;
+}
+
+/* Lista de Navegación */
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1.5rem;
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar-nav li a:hover {
+    background-color: var(--sidebar-hover);
+    color: #ffffff;
+}
+
+/* Opción activa marcada con fondo rojo */
+.sidebar-nav li a.active {
+    background-color: var(--active-red);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.sidebar-nav li a i {
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* Título de las secciones del menú */
+.sidebar-section-title {
+    padding: 1.2rem 1.5rem 0.3rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #a7f3d0;
+    font-weight: bold;
+}
+
+/* Insignias circulares de conteo (Mensajes e Inventario) */
+.badge-count {
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 50%;
+    padding: 0.2em 0.55em;
+    margin-left: auto;
+}
+
+/* ==========================================================================
+   4. TARJETAS Y ELEMENTOS DE LA INTERFAZ
+   ========================================================================== */
+.stat-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Banner superior con imagen de fondo */
+.bg-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url('https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 12px;
+}
+
+/* Estilos de Insignias Suaves para Estados de Tablas */
+.badge-soft-success {
+    background-color: #dcfce7;
+    color: #15803d;
+    font-weight: 600;
+    padding: 0.35em 0.65em;
+    border-radius: 20px;
+}
+
+.badge-soft-warning {
+    background-color: #fef3c7;
+    color: #d97706;
+    font-weight: 600;
+    padding: 0.35em 0.65em;
+    border-radius: 20px;
 
 /* --- ADAPTACIÓN MÓVIL --- */
 @media (max-width: 900px) {

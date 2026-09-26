@@ -1,139 +1,499 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Panel de control</title>
+    <title>Panel de control - FRUMAX</title>
     
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --sidebar-bg: #106f3e;
+            --sidebar-hover: rgba(255, 255, 255, 0.15);
+            --accent-red: #dc3545;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* BARRA LATERAL SIDEBAR */
+        .sidebar-brand {
+            width: 260px;
+            background-color: var(--sidebar-bg);
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1000;
+            overflow-y: auto; /
+        }
+
+        .sidebar-brand .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-weight: 500;
+            padding: 0.55rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .sidebar-brand .nav-link:hover {
+            background-color: var(--sidebar-hover);
+            color: #ffffff !important;
+        }
+
+        .sidebar-brand .nav-link.active {
+            background-color: var(--accent-red) !important;
+            color: #ffffff !important;
+        }
+
+        .sidebar-section-title {
+            color: #8ce3b0;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+        .main-content {
+            margin-left: 260px;
+            min-height: 100vh;
+            width: calc(100% - 260px);
+        }
+
+        @media (max-width: 768px) {
+            .sidebar-brand {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- barra lateral  -->
-     <aside>
-        <div class="sidebar">
-                <img src="C:/Users/Lulu/proyecto-fruver-frumax/assets/imag/proyecto.jpg" alt="logofrumax" width="30px">
-                <h1>Frumax</h1>
-                <small>administrador</small>
+
+    <div class="d-flex">
+        <!-- BARRA LATERAL SIDEBAR -->
+        <aside class="sidebar-brand text-white p-3">
+            <!-- Logo y Marca -->
+            <div class="sidebar-header text-center mb-3 pt-2">
+                <img src="assets/imag/proyecto.jpg" alt="Logo FRUMAX" class="img-fluid mb-2 rounded-circle" style="width: 55px; height: 55px; object-fit: cover; border: 2px solid #ffffff;">
+                <h2 class="h5 m-0 text-white fw-bold tracking-wide">FRUMAX</h2>
             </div>
 
-            <!-- menu de navegacion  -->
-             <nav>
-            <ul>
-                <li><a href="#">deshboard</a></li>
-                <li><a href="#">calendario</a></li>
-                <li><a href="#">mensajes</a></li>
-                <li><a href="#">usuarios</a></li>
-                <li><a href="#">productos</a></li>
-                <li><a href="#">invetario</a></li>
-                <li><a href="#">ventas</a></li>
-                <li><a href="#">compras</a></li>
-                <li><a href="#">proveedores</a></li>
-                <li><a href="#">reportes</a></li>
+            <!-- Perfil del Usuario -->
+            <div class="user-profile text-center mb-3 pb-3 border-bottom border-white-20">
+                <div class="avatar bg-success-subtle text-success rounded-circle d-flex align-items-center justify-content-center mx-auto mb-1 fw-bold fs-5" style="width: 42px; height: 42px;">
+                    E
+                </div>
+                <div class="fw-bold small">elkinverdugo43</div>
+                <small class="text-white-50" style="font-size: 0.75rem;">Administrador</small>
+            </div>
 
-            </ul>
+            <!-- Menú de Navegación Principal -->
+            <nav>
+                <ul class="nav nav-pills flex-column gap-1 mb-2">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active d-flex align-items-center gap-2">
+                            <i class="bi bi-house-door-fill fs-5"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center gap-2">
+                            <i class="bi bi-calendar-event fs-5"></i>
+                            <span>Calendario</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-chat-left-text fs-5"></i>
+                                <span>Mensajes</span>
+                            </div>
+                            <span class="badge bg-danger rounded-pill">7</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center gap-2">
+                            <i class="bi bi-people-fill fs-5"></i>
+                            <span>Usuarios</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center gap-2">
+                            <i class="bi bi-basket-fill fs-5"></i>
+                            <span>Productos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-box-seam-fill fs-5"></i>
+                                <span>Inventario</span>
+                            </div>
+                            <span class="badge bg-warning text-dark rounded-pill">4</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center gap-2">
+                            <i class="bi bi-graph-up fs-5"></i>
+                            <span>Ventas</span>
+                        </a>
+                    </li>
+                </ul>
 
-            <hr>
-            <!-- menu de configuracion  -->
-            <ul>
-                <li><a href="#">Ajustes</a></li>
-                <li><a href="#">perfil</a></li>
-                <li><a href="#">cerrar sesión</a></li>
-            </ul>
-        </nav>
+                
+                <hr class="text-white-50 my-3">
+                <div class="sidebar-section-title px-2 mb-2 text-uppercase">CONFIGURACIÓN</div>
+                <ul class="nav nav-pills flex-column gap-1">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center gap-2">
+                            <i class="bi bi-gear-fill fs-5"></i>
+                            <span>Ajustes</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link d-flex align-items-center gap-2">
+                            <i class="bi bi-person-fill fs-5"></i>
+                            <span>Perfil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-warning fw-bold d-flex align-items-center gap-2">
+                            <i class="bi bi-box-arrow-right fs-5"></i>
+                            <span>Cerrar Sesión</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </aside>
-        <!-- contenido principal  -->
-        <main>
-            <!-- barra superior  -->
-             <header>
-                <form>
-                    <input type="text" placeholder="buscar productos, ventas, usuarios...">
-                </form>
-             </header>
-             <!-- seccion de bienvenida  -->
-                <section>
-                <div>
-                    <h1>Bienvenido al panel de control</h1>
-                    <p>bienvenido</p>
-                </section>
-                <!-- tarjetas metricas -->
-                 <section>
-                    <span>total usuarios</span>
-                    <p>1</p>
-                     <small>total usuarios </small>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main-content p-4">
+            
+            <header class="d-flex justify-content-between align-items-center mb-4 bg-white p-3 rounded shadow-sm">
+                <div class="d-flex align-items-center gap-3">
+                    <button class="btn btn-light d-md-none"><i class="bi bi-list"></i></button>
+                    <form class="search-form position-relative" style="width: 320px;">
+                        <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                        <input type="text" class="form-control ps-5 rounded-pill border-light-subtle bg-light" placeholder="Buscar productos, ventas, usuario...">
+                    </form>
                 </div>
-                <div>
-                <span>ventas de hoy</span>
-                <p>356.000</p>
-                <small>total en ventas</small>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="position-relative">
+                        <i class="bi bi-bell fs-5 text-secondary"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger" style="font-size: 0.6rem;">3</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="avatar bg-success text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 36px; height: 36px;">
+                            
+                        </div>
+                        <div class="d-none d-sm-block">
+                            <div class="fw-bold lh-1" style="font-size: 0.9rem;">elkinverdugo43</div>
+                            <small class="text-muted" style="font-size: 0.75rem;">Administrador</small>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <span>productos en inventario</span>
-                    <p>150</p>
-                    <small>productos disponibles</small>
+            </header>
+
+            <!-- Alerta de Bienvenida -->
+            <div class="alert alert-success d-flex align-items-center gap-2 rounded-3 shadow-sm border-0 bg-success-subtle text-success-emphasis" role="alert">
+                <i class="bi bi-check-circle-fill fs-5"></i>
+                <div><strong>¡Bienvenido elkinverdugo43!</strong></div>
+            </div>
+
+            <!-- Banner de Administración -->
+            <div class="card border-0 text-white mb-4 rounded-3 overflow-hidden shadow-sm position-relative" style="background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('assets/imag/proyecto.jpg') center/cover no-repeat; min-height: 130px;">
+                <div class="card-body p-4 d-flex flex-column justify-content-between">
+                    <div>
+                        <h2 class="h4 fw-bold mb-1 d-flex align-items-center gap-2">
+                            <i class="bi bi-cart3"></i> Panel de Administración
+                        </h2>
+                        <p class="m-0 text-light opacity-90 small">Bienvenido, elkinverdugo43. Aquí tienes un resumen general de tu fruver.</p>
+                    </div>
+                    <div class="text-end text-warning fw-semibold small">
+                        <i class="bi bi-flower1"></i> ¡Frescura que se nota, calidad que te acompaña!
+                    </div>
                 </div>
-                <div>
-                    <span> productos por vencer</span>
-                    <p>10</p>
-                    <small>productos próximos a vencer</small>
+            </div>
+
+            <!-- Tarjetas de Métricas (KPIs) -->
+            <section class="row g-3 mb-4">
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="card border-0 shadow-sm h-100 bg-primary bg-opacity-10">
+                        <div class="card-body d-flex justify-content-between align-items-start">
+                            <div>
+                                <span class="text-muted fw-semibold small">Total Usuarios</span>
+                                <h3 class="fw-bold my-1 text-primary">1</h3>
+                                <small class="text-muted">Usuarios registrados</small>
+                            </div>
+                            <div class="bg-primary text-white p-2 rounded-3">
+                                <i class="bi bi-people-fill fs-5"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </section>
-                <!-- tabla y alertas  -->
-                 <section>
-                    <h3>ventas recientes</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>no. ventas</th>
-                                <th>cliente</th>
-                                <th>total</th>
-                                <th>fecha</th>
-                                <th>estado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>v60025</td>
-                                <td>cliente general</td>
-                                <td>41.000</td>
-                                <td>$21/08/2026 04:30</td>
-                                <td> <span>completada</span></td>
-                            </tr>
-                            <tr>
-                                <td>v60026</td>
-                                <td>Maria Gonzales</td>
-                                <td>23.300</td>
-                                <td>$21/08/2026 05:30</td>
-                                <td> <span>completada</span></td>
-                            </tr>
-                            <tr>
-                                <td>v60027</td>
-                                <td>cliente general</td>
-                                <td>8</td>
-                                <td>$21/08/2026 06:30</td>
-                                <td> <span>completada</span></td>
-                            </tr>
-                            <tr>
-                                <td>v60026</td>
-                                <td>Pedro Ramirez</td>
-                                <td>23.300</td>
-                                <td>$21/08/2026 06:35</td>
-                                <td> <span>completada</span></td>
-                            </tr>
-                            <tr>
-                                <td>v60026</td>
-                                <td>cliente general</td>
-                                <td>8.300</td>
-                                <td>$21/08/2026 06:45</td>
-                                <td> <span>completada</span></td>
-                            </tr>
-                        </tbody>
-                        </table>
-                        <a href="#">ver todas las ventas</a>
-                    </article>
-                    <h3>alertas de inventario</h3>
-                    <table>
-                        <thead<
-                    </table>
-                 </section>
-        </body>
-    </html>
+
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="card border-0 shadow-sm h-100 bg-warning bg-opacity-10">
+                        <div class="card-body d-flex justify-content-between align-items-start">
+                            <div>
+                                <span class="text-muted fw-semibold small">Ventas Hoy</span>
+                                <h3 class="fw-bold my-1 text-warning-emphasis">$350.000</h3>
+                                <small class="text-muted">Total en ventas</small>
+                            </div>
+                            <div class="bg-warning text-white p-2 rounded-3">
+                                <i class="bi bi-cart-check-fill fs-5"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="card border-0 shadow-sm h-100 bg-success bg-opacity-10">
+                        <div class="card-body d-flex justify-content-between align-items-start">
+                            <div>
+                                <span class="text-muted fw-semibold small">Productos en Inventario</span>
+                                <h3 class="fw-bold my-1 text-success">152</h3>
+                                <small class="text-muted">Productos disponibles</small>
+                            </div>
+                            <div class="bg-success text-white p-2 rounded-3">
+                                <i class="bi bi-box-seam-fill fs-5"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="card border-0 shadow-sm h-100 bg-danger bg-opacity-10">
+                        <div class="card-body d-flex justify-content-between align-items-start">
+                            <div>
+                                <span class="text-muted fw-semibold small">Productos por Vencer</span>
+                                <h3 class="fw-bold my-1 text-danger">8</h3>
+                                <small class="text-muted">Próximos a vencer</small>
+                            </div>
+                            <div class="bg-warning text-white p-2 rounded-3">
+                                <i class="bi bi-exclamation-triangle-fill fs-5"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Acciones Rápidas -->
+            <section class="mb-4 bg-white p-3 rounded shadow-sm">
+                <h6 class="fw-bold mb-3 d-flex align-items-center gap-2 text-dark">
+                    <span class="bg-success rounded-pill" style="width: 4px; height: 18px; display: inline-block;"></span>
+                    Acciones Rápidas
+                </h6>
+                <div class="d-flex flex-wrap gap-2">
+                    <button class="btn btn-success d-flex align-items-center gap-2"><i class="bi bi-plus-lg"></i> Nueva Venta</button>
+                    <button class="btn btn-outline-success d-flex align-items-center gap-2"><i class="bi bi-tree-fill"></i> Nuevo Producto</button>
+                    <button class="btn btn-outline-warning text-dark d-flex align-items-center gap-2"><i class="bi bi-bag-plus"></i> Compra</button>
+                    <button class="btn btn-outline-primary d-flex align-items-center gap-2"><i class="bi bi-file-earmark-bar-graph"></i> Reporte de Ventas</button>
+                    <button class="btn btn-outline-secondary d-flex align-items-center gap-2"><i class="bi bi-gear"></i> Ajustes</button>
+                </div>
+            </section>
+
+            <!-- Tablas: Ventas Recientes y Alertas de Inventario -->
+            <section class="row g-4 mb-4">
+                <!-- Tabla Ventas Recientes -->
+                <div class="col-12 col-lg-7">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-white border-0 pt-3 pb-0">
+                            <h5 class="fw-bold h6 d-flex align-items-center gap-2">
+                                <i class="bi bi-cart text-secondary"></i> Ventas Recientes
+                            </h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle mb-0">
+                                    <thead class="table-light small text-muted">
+                                        <tr>
+                                            <th>No. Venta</th>
+                                            <th>Cliente</th>
+                                            <th>Total</th>
+                                            <th>Fecha</th>
+                                            <th>Estado</th>
+                                            <th>Acc.</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="small">
+                                        <tr>
+                                            <td class="fw-bold">V60025</td>
+                                            <td>Cliente General</td>
+                                            <td class="text-success fw-bold">$41.500</td>
+                                            <td>21/08/2026 19:45</td>
+                                            <td><span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">Completada</span></td>
+                                            <td><a href="#" class="text-secondary"><i class="bi bi-eye-fill"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">V60024</td>
+                                            <td>María González</td>
+                                            <td class="text-success fw-bold">$78.500</td>
+                                            <td>21/08/2026 18:30</td>
+                                            <td><span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">Completada</span></td>
+                                            <td><a href="#" class="text-secondary"><i class="bi bi-eye-fill"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">V60023</td>
+                                            <td>Cliente General</td>
+                                            <td class="text-success fw-bold">$23.300</td>
+                                            <td>21/08/2026 17:20</td>
+                                            <td><span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">Completada</span></td>
+                                            <td><a href="#" class="text-secondary"><i class="bi bi-eye-fill"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">V60022</td>
+                                            <td>Pedro Ramírez</td>
+                                            <td class="text-success fw-bold">$112.000</td>
+                                            <td>21/08/2026 16:10</td>
+                                            <td><span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">Completada</span></td>
+                                            <td><a href="#" class="text-secondary"><i class="bi bi-eye-fill"></i></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">V60021</td>
+                                            <td>Cliente General</td>
+                                            <td class="text-success fw-bold">$36.000</td>
+                                            <td>21/08/2026 15:05</td>
+                                            <td><span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">Completada</span></td>
+                                            <td><a href="#" class="text-secondary"><i class="bi bi-eye-fill"></i></a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0 py-3">
+                            <a href="#" class="text-success fw-bold text-decoration-none small">Ver todas las ventas &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabla Alertas de Inventario -->
+                <div class="col-12 col-lg-5">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-white border-0 pt-3 pb-0">
+                            <h5 class="fw-bold h6 d-flex align-items-center gap-2">
+                                <i class="bi bi-exclamation-triangle text-warning"></i> Alertas de Inventario
+                            </h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle mb-0">
+                                    <thead class="table-light small text-muted">
+                                        <tr>
+                                            <th>Producto</th>
+                                            <th>Stock Actual</th>
+                                            <th>Estado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="small">
+                                        <tr>
+                                            <td>🍅 Tomate Chonto (kg)</td>
+                                            <td>2.5 kg</td>
+                                            <td><span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">Bajo</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>🥔 Papa Criolla (kg)</td>
+                                            <td>3.6 kg</td>
+                                            <td><span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">Bajo</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>🧅 Cebolla Cabezona (kg)</td>
+                                            <td>1.2 kg</td>
+                                            <td><span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">Bajo</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>🥬 Lechuga Batavia (und)</td>
+                                            <td>4 und</td>
+                                            <td><span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">Bajo</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>🥕 Zanahoria (kg)</td>
+                                            <td>2.6 kg</td>
+                                            <td><span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">Bajo</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0 py-3">
+                            <a href="#" class="text-warning text-darken-2 fw-bold text-decoration-none small">Ver Inventario completo &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Gráfica: Ingresos vs Gastos -->
+            <section class="card border-0 shadow-sm p-3 mb-4">
+                <div class="card-body">
+                    <h5 class="fw-bold h6 mb-1">Ingresos vs Gastos</h5>
+                    <p class="text-success small mb-3">Últimos 6 meses</p>
+                    <div style="height: 280px; position: relative;">
+                        <canvas id="chartIngresosGastos"></canvas>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Chart.js para renderizar la gráfica -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('chartIngresosGastos').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Mar', 'Abr', 'May', 'Jun'],
+                datasets: [
+                    {
+                        label: 'Ingresos',
+                        data: [1900000, 2100000, 2400000, 2700000],
+                        backgroundColor: '#10b981',
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Gastos',
+                        data: [1000000, 1100000, 1250000, 1400000],
+                        backgroundColor: '#ef4444',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        align: 'end'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + (value / 1000) + 'k';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

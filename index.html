@@ -1,545 +1,322 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frumax - Fruver</title>
+    <meta name="description" content="FRUMAX - La frescura del campo en tu hogar.">
+    <title>FRUMAX | La frescura del campo en tu hogar</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100 bg-white">
+s
+    <!--NAVEGACIÓN -->
+    <header class="shadow-sm bg-white sticky-top border-top border-success border-3 border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light py-2 px-4">
+            <div class="container-fluid px-0">
 
-    <!--Enecabezado-->
-    <header>
+                <a href="index.html">
+                <img src="assets/imag/proyecto.jpg" alt="Logo de la empresa" width="50" class="img-fluid">
+                 </a>
 
-        <table width="100%">
-            <tr>
 
-            <div>
-                <a href="#">
-                    <img src="assets/imagenes/FOTO PROYECTO.jpg" alt="logo FRUMAX" width="50">
-                </a>
+                <!-- Botón Menú Hamburguesa para telefonos -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                    aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú colapsable -->
+                <div class="collapse navbar-collapse" id="navbarMain">
+
+                    <!-- Enlaces principales -->
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-semibold text-dark" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Catálogo
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Frutas</a></li>
+                                <li><a class="dropdown-item" href="#">Verduras</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nosotros
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Nuestra Historia</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <!-- Botones superiores derechos (Carrito, Iniciar sesión y Registrarse) -->
+                    <div class="d-flex align-items-center justify-content-center gap-2 mt-3 mt-lg-0">
+                        <a href="#" class="btn btn-link text-dark fs-5 p-1 me-2" aria-label="Carrito de compras">
+                            <i class="bi bi-cart3"></i>
+                        </a>
+                        <a href="iniciar_sesion.html" class="btn btn-outline-success btn-sm px-3 py-2 fw-semibold">Iniciar sesión</a>
+                        <a href="registro.html" class="btn btn-success btn-sm px-3 py-2 fw-semibold">Registrarse</a>
+                    </div>
+
+                </div>
+
             </div>
-
-                <td align="center">
-                    <a href="#inicio">Inicio</a> &nbsp;&nbsp;
-                    <a href="#catalogo">Catálogo</a> &nbsp;&nbsp;
-                    <a href="#nosotros">Nosotros</a> &nbsp;&nbsp;
-                    <a href="#contacto">Contacto</a>
-                </td>
-
-                <td align="right">
-                    🛒
-                    <button>Iniciar sesión</button>
-                    <button>Registrarse</button>
-                </td>
-
-            </tr>
-        </table>
-
-        <hr>
-
+        </nav>
     </header>
 
-    <!--Inicio-->
-    <section id="inicio">
-
-        <table width="100%" cellpadding="30">
-
-            <tr>
-
-                <td width="50%">
-
-                    <p>🌱 FRUVER 100% FRESCO</p>
-
-                    <h1>
-                        La frescura del campo,
-                        <font color="green">en tu hogar</font>
-                    </h1>
-
-                    <p>
-                        En Frumax encontrarás las mejores frutas y verduras,
-                        seleccionadas a diario para garantizar calidad y sabor
-                        en cada mordisco.
-                    </p>
-
-                    <button>
-                        Comprar ahora
-                    </button>
-
-                    <button>
-                        Crear cuenta
-                    </button>
-
-                    <br><br>
-
-                    <table>
-                        <tr>
-                            <td>
-                                <b>200+</b><br>
-                                Productos
-                            </td>
-
-                            <td>
-                                <b>4.800+</b><br>
-                                Clientes felices
-                            </td>
-
-                            <td>
-                                <b>10</b><br>
-                                Años de experiencia
-                            </td>
-                        </tr>
-                    </table>
-
-                </td>
-
-                <td width="50%" align="center">
-
-                    <img src="assets/imagenes/pagina principal.jpeg"
-                        width="600"
-                        alt="Frutas frescas">
-
-                    <p>
-                        🌱 <b>Producto orgánico</b><br>
-                        Certificado
-                    </p>
-
-                </td>
-
-            </tr>
-
-        </table>
-
-    </section>
-
-    <hr>
-
-    <!--Categorias-->
-    <section>
-
-        <table width="100%" cellpadding="20">
-
-            <tr align="center">
-
-                <td>
-                    🍎<br>
-                    <b>Frutas</b>
-                </td>
-
-                <td>
-                    🥬<br>
-                    <b>Verduras</b>
-                </td>
-
-                <td>
-                    🌱<br>
-                    <b>Hortalizas</b>
-                </td>
-
-                <td>
-                    🥫<br>
-                    <b>Abarrotes</b>
-                </td>
-
-            </tr>
-
-        </table>
-
-    </section>
-
-    <hr>
-
-    <!--Productos-->
-
-    <section id="catalogo">
-
-        <h2>Productos destacados</h2>
-
-        <p>Los más frescos de hoy</p>
-
-        <table width="100%" cellpadding="15">
-
-            <tr>
-
-                <!--Fresa-->
-                <td width="33%" align="center">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=400"width="300"
-                        height="200"
-                        alt="Fresas"
->
-
-                    <h3>🍓 Fresas Frescas</h3>
-
-                    <p>Por 500g</p>
-
-                    <h3>
-                        <font color="green">$4.500</font>
-                    </h3>
-
-                    <button>Comprar</button>
-
-                </td>
-
-
-                <!--MANGO-->
-                <td width="33%" align="center">
-
-                    <img src="assets/imagenes/Mango.jpeg"
-                        width="200"
-                        height="180"
-                        alt="Mango"
-                    >
-
-                    <h3>🥭 Mango</h3>
-
-                    <p>Por 500g</p>
-
-                    <h3>
-                        <font color="green">$3.200</font>
-                    </h3>
-
-                    <button>Comprar</button>
-
-                </td>
-
-
-                <!-- MANDARINA -->
-                <td width="33%" align="center">
-
-                    <img src="assets/imagenes/Mandarina.jpeg"
-                        width="200"
-                        height="180"
-                        alt="Mandarina"
-                    >
-
-                    <h3>🍊 Mandarina</h3>
-
-                    <p>Por 500g</p>
-
-                    <h3>
-                        <font color="green">$3.000</font>
-                    </h3>
-
-                    <button>Comprar</button>
-
-                </td>
-
-            </tr>
-
-        </table>
-
-    </section>
-
-    <hr>
-    <!--Mision y Vision-->
-
-    <center>
-    <h2>Nosotros</h2>
-
-    <table width="100%" cellpadding="20">
-
-        <tr>
-            <td width="50%"></td>
-            <h3> Mision</h3>
-            <p>
-                En Frumax tenemos como misión ofrecer a nuestros clientes frutas y verduras de la más alta calidad, 
-                frescas y seleccionadas directamente de los mejores cultivos de la región.
-                Nos comprometemos a brindar un servicio amable, rápido y confiable, contribuyendo a una alimentación saludable para las familias de Sogamoso y Boyacá.
-            </p>
-        </tr>
-
-        <td>
-            <td width="50%"></td>
-            <h3> Mision</h3>
-            <p>
-                Para el año 2030, Frumax será reconocido como el fruver líder del departamento de Boyacá, distinguiéndose por la variedad, frescura y precios justos de sus productos. 
-                Buscamos expandir nuestra operación para llegar a más hogares mediante canales digitales, domicilios y alianzas con productores locales que fortalezcan el campo colombiano.
-            </p>
-        </td>
-        </tr>
-        </table>
-        </center>
-
-    <hr>
-
-    <!--Por que elegir Frumax-->
-    <section id="nosotros">
-
-        <center>
-            <h2>
-                ¿Por qué elegir
-                <font color="green">Frumax</font>?
-            </h2>
-        </center>
-
-
-        <table width="100%" cellpadding="25">
-
-            <tr>
-
-                <td width="33%">
-
-                    <h2>🌱</h2>
-
-                    <h3>Siempre fresco</h3>
-
-                    <p>
-                        Recibimos producto directo de las fincas
-                        todos los días para garantizar máxima frescura.
-                    </p>
-
-                </td>
-
-
-                <td width="33%">
-
-                    <h2>🚚</h2>
-
-                    <h3>Entrega rápida</h3>
-
-                    <p>
-                        Llevamos tus pedidos a domicilio el mismo día.
-                        Sogamoso y municipios aledaños.
-                    </p>
-
-                </td>
-
-
-                <td width="33%">
-
-                    <h2>💰</h2>
-
-                    <h3>Mejor precio</h3>
-
-                    <p>
-                        Trabajamos directamente con productores
-                        para ofrecer precios justos sin intermediarios.
-                    </p>
-
-                </td>
-
-            </tr>
-
-        </table>
-
-    </section>
-
-
-    <hr>
-
-    <!--Unicacion-->
-
-    <section id="contacto">
-
-        <center>
-
-            <p>
-                ENCUÉNTRANOS
-            </p>
-
-            <h2>
-                Nuestra
-                ubicación
-            </h2>
-
-        </center>
-
-
-        <table width="100%" cellpadding="20">
-
-            <tr>
-
-                <!-- MAPA -->
-
-                <td width="50%" align="center">
-
-                    <div>
-                <center>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.0698266875106!2d-72.94289392331687!3d5.703052332149914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e6a45ca20de23af%3A0x61d91f618eb2b87a!2sCl.%203%20Sur%20%23%2013-39%2C%20Sogamoso%2C%20Boyac%C3%A1!5e0!3m2!1ses-419!2sco!4v1788568639772!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </center>
+    <!-- contenido principal -->
+    <main class="flex-grow-1">
+
+        <section class="bg-light py-5">
+            <div class="container py-4">
+                <div class="row align-items-center gy-4">
+
+                    <!-- Textos y Botones-->
+                    <div class="col-lg-6">
+                        <span class="badge bg-success-subtle text-success fw-bold px-3 py-2 rounded-pill mb-3" style="font-size: 0.85rem;">
+                            FRUVER 100% FRESCO
+                        </span>
+
+                        <h1 class="display-4 fw-bold text-dark mb-3">
+                            La frescura del campo, <br>
+                            <span class="text-success">en tu hogar</span>
+                        </h1>
+
+                        <p class="text-secondary fs-5 mb-4">
+                            En Frumax encontrarás las mejores frutas y verduras, seleccionadas a diario para garantizar calidad y sabor en cada mordisco.
+                        </p>
+
+                        <!-- Botones principales -->
+                        <div class="d-flex gap-3 mb-5">
+                            <a href="#" class="btn btn-danger btn-lg px-4 fs-6 fw-bold rounded-3">Comprar ahora</a>
+                        </div>
+
+                        <!-- Estadísticas -->
+                        <div class="row text-center text-sm-start g-3">
+                            <div class="col-4">
+                                <h3 class="fw-bold text-success mb-0">200+</h3>
+                                <small class="text-secondary">Productos</small>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold text-success mb-0">4.800+</h3>
+                                <small class="text-secondary">Clientes felices</small>
+                            </div>
+                            <div class="col-4">
+                                <h3 class="fw-bold text-success mb-0">12</h3>
+                                <small class="text-secondary">Años de experiencia</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Imagenes -->
+                    <div class="col-lg-6">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=800&q=80"
+                                alt="Frutas y verduras frescas" class="img-fluid rounded-4 shadow-sm w-100">
+
+                                <div>
+                                    <strong class="d-block text-dark lh-1 small">Catalogo</strong>
+                                    <small class="text-secondary" style="font-size: 0.75rem;">Certificado</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-                </td>
-
-
-                <!--Informacion-->
-
-                <td width="50%" valign="top">
-
-                    <!-- DIRECCIÓN -->
-
-                    <table border="1" width="100%" cellpadding="15">
-
-                        <tr>
-
-                            <td width="15%">
-                                🔴
-                            </td>
-
-                            <td>
-
-                                <b>Dirección</b>
-
-                                <p>
-                                    Calle 3 Sur #13-39<br>
-                                    Sogamoso, Boyacá
-                                </p>
-
-                            </td>
-
-                        </tr>
-
-                    </table>
-
-                    <br>
-
-
-                    <!-- HORARIOS -->
-
-                    <table border="1" width="100%" cellpadding="15">
-
-                        <tr>
-
-                            <td width="15%">
-                                🟢
-                            </td>
-
-                            <td>
-
-                                <b>Horarios de atención</b>
-
-                                <p>
-                                    Lunes – Domingo: 7:00 am – 9:00 pm
-                                </p>
-
-                            </td>
-
-                        </tr>
-
-                    </table>
-
-                    <br>
-
-
-                    <!-- TELÉFONO -->
-
-                    <table border="1" width="100%" cellpadding="15">
-
-                        <tr>
-
-                            <td width="15%">
-                                🔴
-                            </td>
-
-                            <td>
-
-                                <b>Teléfono</b>
-
-                                <p>
-                                    322 234 7158<br>
-                                    WhatsApp disponible
-                                </p>
-
-                            </td>
-
-                        </tr>
-
-                    </table>
-
-                    <br>
-
-                    <button>
-                        📍 Abrir en Google Maps
-                    </button>
-
-                </td>
-
-            </tr>
-
-        </table>
-
-    </section>
-
-
-    <br>
-
-
-    <!--Footer -->
-
-    <footer>
-
-        <table width="100%" cellpadding="30">
-
-            <tr>
-
-                <!-- DESCRIPCIÓN -->
-
-                <td width="33%">
-
-                    <h2>
-                        🌱 <font color="white">FRUMAX</font>
-                    </h2>
-
-                    <p>
-                        Tu fruver de confianza. Productos frescos
-                        directo del campo a tu mesa.
-                    </p>
-
-                </td>
-
-
-                <!-- HORARIOS -->
-
-                <td width="33%">
-
-                    <h3>Horarios</h3>
-
-                    <p>
-                        Lunes – Domingo: 7:00 am – 9:00 pm<br>
-
-                    </p>
-
-                </td>
-
-
-                <!-- CONTACTO -->
-
-                <td width="33%">
-
-                    <h3>Contacto</h3>
-
-                    <p>
-                        📍 Calle 3 Sur #13-39, Sogamoso, Boyacá
-                    </p>
-
-                    <p>
-                        📞 322 234 7158
-                    </p>
-
-                    <p>
-                        ✉️ hola@frumax.co
-                    </p>
-
-                </td>
-
-            </tr>
-
-        </table>
-
-
-        <hr>
-
-        <center>
-
-            <p>
-                © 2026 Frumax. Todos los derechos reservados.
-            </p>
-
-        </center>
-
+        </section>
+
+        <!--Categorias-->
+        <section class="bg-success text-white py-3">
+            <div class="container">
+                <div class="d-flex justify-content-around align-items-center flex-wrap gap-3">
+                    <a href="#" class="text-white text-decoration-none d-flex flex-column align-items-center gap-1 small">
+                        <i class="bi bi-apple fs-4"></i>
+                        <span>Frutas</span>
+                    </a>
+                    <a href="#" class="text-white text-decoration-none d-flex flex-column align-items-center gap-1 small">
+                    <span class="fs-4">🥦</span>
+                    <span>Verduras</span>
+                    </a>
+                    
+                    <a href="#" class="text-white text-decoration-none d-flex flex-column align-items-center gap-1 small">
+                        <i class="bi bi-box-seam fs-4"></i>
+                        <span>Abarrotes</span>
+                    </a>
+                </div>
+            </div>
+
+            <!--Catalogo-->
+<section class="py-5 bg-light">
+    <div class="container">
+
+        <!-- Encabezado -->
+        <div class="d-flex justify-content-between align-items-end mb-4">
+            <div>
+                <h2 class="fw-bold text-dark mb-1">Catalogo</h2>
+                <p class="text-secondary small mb-0">Los más frescos de hoy</p>
+            </div>
+            <a href="#" class="text-success text-decoration-none fw-semibold small">Ver todo</a>
+        </div>
+
+        <!--Carts de productos -->
+        <div class="row g-4">
+
+            <!-- Producto 1: Fresas -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top img-fluid" style="height: 200px; object-fit: cover;" alt="Fresas Frescas">
+                        
+                        <!-- imagen -->
+                        <span class="position-absolute top-0 start-0 m-3 badge bg-danger rounded-pill px-3 py-2 fw-semibold">Oferta</span>
+                        <span class="position-absolute top-0 end-0 m-3 badge bg-white text-dark rounded-pill px-3 py-2 fw-semibold shadow-sm">Frutas</span>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <h5 class="card-title fw-bold text-dark mb-1">Fresas Frescas</h5>
+                            <p class="card-text text-secondary small mb-3">Por 500g</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fs-5 fw-bold text-success">$4.500</span>
+                            <a href="#" class="btn btn-danger px-4 py-2 fw-semibold rounded-3 btn-sm">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2: Mango -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top img-fluid" style="height: 200px; object-fit: cover;" alt="Mango">
+                        
+                        <!-- Badge de Categoría -->
+                        <span class="position-absolute top-0 end-0 m-3 badge bg-white text-dark rounded-pill px-3 py-2 fw-semibold shadow-sm">Frutas</span>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <h5 class="card-title fw-bold text-dark mb-1">Mango</h5>
+                            <p class="card-text text-secondary small mb-3">Por 500g</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fs-5 fw-bold text-success">$3.200</span>
+                            <a href="#" class="btn btn-danger px-4 py-2 fw-semibold rounded-3 btn-sm">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3: Mandarina -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card h-100 border-0 rounded-4 shadow-sm overflow-hidden">
+                    <div class="position-relative">
+                        <img src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=600&q=80" 
+                             class="card-img-top img-fluid" style="height: 200px; object-fit: cover;" alt="Mandarina">
+                        
+                        <!-- Badge de Categoría -->
+                        <span class="position-absolute top-0 end-0 m-3 badge bg-white text-dark rounded-pill px-3 py-2 fw-semibold shadow-sm">Frutas</span>
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between p-3">
+                        <div>
+                            <h5 class="card-title fw-bold text-dark mb-1">Mandarina</h5>
+                            <p class="card-text text-secondary small mb-3">Por 500g</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fs-5 fw-bold text-success">$2.800</span>
+                            <a href="#" class="btn btn-danger px-4 py-2 fw-semibold rounded-3 btn-sm">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--  ¿POR QUÉ ELEGIR FRUMAX?  -->
+<section class="py-5 bg-light">
+    <div class="container py-3">
+
+        <!-- Encabezado -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-dark mb-1">
+                ¿Por qué elegir <span class="text-success">Frumax</span>?
+            </h2>
+        </div>
+
+        <!-- Cards -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+            <!-- Card 1: Siempre fresco -->
+            <div class="col">
+                <div class="card h-100 border-0 rounded-4 shadow-sm p-3">
+                    <div class="card-body">
+                        <div class="mb-3 fs-2">🌱</div>
+                        <h5 class="card-title fw-bold text-dark mb-2">Siempre fresco</h5>
+                        <p class="card-text text-secondary small mb-0">
+                            Recibimos producto directo de las fincas todos los días para garantizar máxima frescura.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Entrega rápida -->
+            <div class="col">
+                <div class="card h-100 border-0 rounded-4 shadow-sm p-3">
+                    <div class="card-body">
+                        <div class="mb-3 fs-2">🚚</div>
+                        <h5 class="card-title fw-bold text-dark mb-2">Entrega rápida</h5>
+                        <p class="card-text text-secondary small mb-0">
+                            Llevamos tus pedidos a domicilio el mismo día. Sogamoso y municipios aledaños.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Mejor precio -->
+            <div class="col">
+                <div class="card h-100 border-0 rounded-4 shadow-sm p-3">
+                    <div class="card-body">
+                        <div class="mb-3 fs-2">💰</div>
+                        <h5 class="card-title fw-bold text-dark mb-2">Mejor precio</h5>
+                        <p class="card-text text-secondary small mb-0">
+                            Trabajamos directamente con productores para ofrecerte precios justos sin intermediarios.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+</section>
+        </section>
+
+    </main>
+
+    <!-- pie de pagina -->
+    <footer class="text-center py-3 small text-secondary border-top border-bottom border-success border-4 bg-white">
+        <p class="mb-0">&copy; 2026 FRUMAX. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Bootstrap 5 JavaScript Bundle con Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
