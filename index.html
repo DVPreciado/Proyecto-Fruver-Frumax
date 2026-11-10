@@ -2,6 +2,8 @@
 <html lang="es">
 
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js" defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="FRUMAX - La frescura del campo en tu hogar.">
@@ -12,19 +14,24 @@
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/index.css">
+
     <style>
    
       html, body {
         margin: 0 !important;
         padding: 0 !important;
       }
+      #buscarProductoIndex:focus {
+        border-color: #28a745 !important;
+        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25) !important;
+      }
     </style>
 </head>
 
-</head>
+
 
 <body class="d-flex flex-column min-vh-100 bg-white">
-s
     <!--NAVEGACIÓN -->
     <header class="shadow-sm bg-white sticky-top border-top border-success border-3 border-bottom">
         <nav class="navbar navbar-expand-lg navbar-light py-2 px-4">
@@ -49,15 +56,15 @@ s
                         <li class="nav-item">
                             <a class="nav-link active fw-semibold text-dark" href="#">Inicio</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Catálogo
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Frutas</a></li>
-                                <li><a class="dropdown-item" href="#">Verduras</a></li>
-                            </ul>
-                        </li>
+                       <li class="nav-item dropdown" style="position: relative;">
+                        <a class="nav-link text-dark fw-semibold" href="#" id="btnCatalogo">
+                            Catálogo ▼
+                        </a>
+                        <ul class="dropdown-menu shadow border-0 rounded-3" id="menuCatalogo" style="display: none; position: absolute; top: 100%; left: 0;">
+                            <li><a class="dropdown-item py-2" href="#">Frutas</a></li>
+                            <li><a class="dropdown-item py-2" href="#">Verduras</a></li>
+                        </ul>
+                    </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Nosotros
@@ -70,7 +77,15 @@ s
                             <a class="nav-link text-dark" href="#">Contacto</a>
                         </li>
                     </ul>
-
+                    <!-- Barra de búsqueda -->
+                    <div class="mx-lg-3 my-2 my-lg-0" style="width: 220px;">
+                        <input 
+                            type="text" 
+                            id="buscarProductoIndex" 
+                            class="form-control form-control-sm rounded-pill px-3" 
+                            placeholder="Buscar productos..."
+            >
+                    </div>
                     <!-- Botones superiores derechos (Carrito, Iniciar sesión y Registrarse) -->
                     <div class="d-flex align-items-center justify-content-center gap-2 mt-3 mt-lg-0">
                         <a href="#" class="btn btn-link text-dark fs-5 p-1 me-2" aria-label="Carrito de compras">
@@ -88,6 +103,8 @@ s
 
     <!-- contenido principal -->
     <main class="flex-grow-1">
+
+        
 
         <section class="bg-light py-5">
             <div class="container py-4">
@@ -133,8 +150,18 @@ s
                     <!-- Imagenes -->
                     <div class="col-lg-6">
                         <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=800&q=80"
-                                alt="Frutas y verduras frescas" class="img-fluid rounded-4 shadow-sm w-100">
+                            <div class="carousel-container">
+                                <div class="carousel-track" id="track">
+                                    <img src="assets/imag/imagen1.jpg" alt="Imagen 1">
+                                    <img src="assets/imag/imagen2.jpg" alt="Imagen 2">
+                                    <img src="assets/imag/imagen3.jpg" alt="Imagen 3">
+                                </div>
+
+                                <button class="btn-nav btn-prev" id="prevBtn">&#10094;</button>
+                                <button class="btn-nav btn-next" id="nextBtn">&#10095;</button>
+
+                                <div class="carousel-indicators" id="indicators"></div>
+                                </div>
 
                                 <div>
                                     <strong class="d-block text-dark lh-1 small">Catalogo</strong>
@@ -149,7 +176,7 @@ s
         </section>
 
         <!--Categorias-->
-        <section class="bg-success text-white py-3">
+        <section class="bg-success text-white py-3" id="catalogo">
             <div class="container">
                 <div class="d-flex justify-content-around align-items-center flex-wrap gap-3">
                     <a href="#" class="text-white text-decoration-none d-flex flex-column align-items-center gap-1 small">
@@ -356,8 +383,11 @@ s
     <p style="margin: 0 !important; padding-bottom: 0 !important;">&copy; 2026 Frumax. Todos los derechos reservados.</p>
   </div>
 </footer>
+
     <!-- Bootstrap 5 JavaScript Bundle con Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" rel="stylesheet"></link>
+    <script src="main.js"></script>
+
 </body>
 
 </html>
